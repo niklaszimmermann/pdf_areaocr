@@ -1,5 +1,4 @@
 ## Disclaimer
-
 Im a beginner at programming.
 
 This code / codesnipet is a result of my learning process and most likely
@@ -12,22 +11,26 @@ it would help me out a lot and is highly appreciated.
 I strongly believe that the internet thrives of user participation,
 hence I'm hoping that somebody might find this useful / helpful. 
 
-Kind regards, Niklas 
-
 ## Introduction
+Reads a certain area of a .pdf file and returns the content as stringVariable.
 
-C# / PowerShell read an area defined by coordinated OCR using the iTextSharp - Librarie
+The C# class uses the iTextPdf-librarie to use OCR on an area defined by coordiantes,
+of which the content is returned as string variable.
 
-Reads a certain area of a .pdf file and returns the content as stringVariable. (using the iTextSharp.dll)
-
-- reads certrain area defined by coordinates 
+I mainly use the class directly in PowerShell.
+The needed code and working example will be provided by me at a future stage.
 
 ## Example / Use-Case
+As aforementioned I mainly use the class in PowerShell.
+
+For example I set up an event which uses PowerShell to:
+- automatically download the menu of the day as .pdf-file
+- extract the content of several areas
+- generate a notification mail using the extracted content
+- send me the mail on windows startup
 
 ## How-To
 
-## Motivation
 
 ## License
 https://sourceforge.net/projects/itextsharp/
-## Disclaimer
