@@ -14,7 +14,7 @@ hence I'm hoping that somebody might find this useful / helpful.
 ## Introduction
 Reads a certain area of a .pdf file and returns the content as stringVariable.
 
-The C# class uses the iTextPdf-librarie to use OCR on an area defined by coordiantes,
+The C# class uses the iTextPdf-library to use OCR on an area defined by coordiantes,
 of which the content is returned as string variable.
 
 I mainly use the class directly in PowerShell.
@@ -59,7 +59,7 @@ In my example that results in PointA(118,1 / 265,1) and PointB(484,1 x 213,3).
 #Step 04) correct the values and convert them into the required format
 
 - Sumatra uses the upper left corner as origin, hence we have to adjust our values for the use with the iTextPdf librarie
-- the value for the position onn the x-axis stays the same.
+- the value for the position on the x-axis stays the same.
 
 In my example that means we know the following values for the adjustes Point: corPointA(118,1 / ?)
 
@@ -72,6 +72,11 @@ Repeating the steps for PointB we end up with the following valid Points: corPoi
 Valid Data: 118.1f, 576.7f, 484.1f, 628.5f (float values C#)
 
 #Step 05) feed the data into the provided methods
+
+simpelst way
+
+areaArray = new Rect[1] {createRect(118.1f, 576.7f, 484.1f, 628.5f)}
+Console.WriteLine(readRect(areaArray, @"C:\Users\[...]\menu-of-the-day.pdf"))
 
 
 
