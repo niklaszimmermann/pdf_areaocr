@@ -31,6 +31,7 @@ For example I set up an event which uses PowerShell to:
 
 ## How-To
 #Step 01) pdf-file
+
 Have a .pdf-file locally on your drive of which you desire to use OCR on a certain area.
 ![imgExamplePdf](/tut/samplepdf_s.jpg)
 
