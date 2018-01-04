@@ -37,6 +37,7 @@ Have a .pdf-file locally on your drive of which you desire to use OCR on a certa
 
 #Step 02) undersand how coordinates in a pdf-file work.
 As used by the iTextPdf-librarie:
+
 ![imgAnnotatedExamplePdf](/tut/samplepdf_annotation1_s.jpg)
 
 - all values for coordinates are given in pt
