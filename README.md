@@ -33,7 +33,7 @@ For example I set up an event which uses PowerShell to:
 Step 01) pdf-file
 Have a .pdf-file locally on your drive of which you desire to use OCR on a certain area.
 
-![example pdf](r/tut/pdfpic_png.PNG "smthing")
+<img src="/tut/pdf_areaocr/pdfpic_png.png" width="200">
 
 
 Step 02) undersand how coordinates in a pdf-file work.
