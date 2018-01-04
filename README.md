@@ -30,10 +30,10 @@ For example I set up an event which uses PowerShell to:
 - send me the notfication mail on windows startup
 
 ## How-To
-
 Step 01) pdf-file
 Have a .pdf-file locally on your drive of which you desire to use OCR on a certain area.
 
+![example pdf](r/tut/pdfpic_png.PNG "smthing")
 
 
 Step 02) undersand how coordinates in a pdf-file work.
