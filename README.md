@@ -33,15 +33,8 @@ For example I set up an event which uses PowerShell to:
 Step 01) pdf-file
 Have a .pdf-file locally on your drive of which you desire to use OCR on a certain area.
 
-![test image size](/tut/testjpg.jpg){:class="img-responsive"}
-
-{::nomarkdown}
-
-<img src"/tut/testjpg.jpg">
-
-<img src"/tut/testjpg.jpg width="200" height="100">
-
-{:/}
+![test image size](/tut/testjpg.jpg)
+<!-- .element style="border:5; width="50%" height="50%" -->
 
 Step 02) undersand how coordinates in a pdf-file work.
 
