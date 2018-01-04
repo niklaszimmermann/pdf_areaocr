@@ -19,7 +19,9 @@ namespace tutorial_namespace
 {
     public static class tutorial_class
     {
-        //THE PROVIDED METHODS 
+        //
+        //THE PROVIDED METHODS
+        //
 
         //creates an rectangle-object (area which OCR is used on)
         //receives 4 float variables
@@ -51,8 +53,11 @@ namespace tutorial_namespace
         return output;
         }
 
-     
+        //
         //EXAMPLE CONFIGURATION AND METHOS FOR THE GITHUB TUTORIAL
+        //
+
+
         public static void Main(string[] args)
         {
             Console.WriteLine(Config01(@"C:\Users\[...]\menu-of-the-day.pdf"));
