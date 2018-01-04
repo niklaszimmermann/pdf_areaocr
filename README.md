@@ -35,7 +35,13 @@ Have a .pdf-file locally on your drive of which you desire to use OCR on a certa
 
 ![test image size](/tut/testjpg.jpg){:class="img-responsive"}
 
-<img src"/tut/testjpg.jpg" width="200" height="100">
+{::nomarkdown}
+
+<img src"/tut/testjpg.jpg">
+
+<img src"/tut/testjpg.jpg width="200" height="100">
+
+{:/}
 
 Step 02) undersand how coordinates in a pdf-file work.
 
