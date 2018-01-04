@@ -30,21 +30,21 @@ For example I set up an event which uses PowerShell to:
 - send me the notfication mail on windows startup
 
 ## How-To
-Step 01) pdf-file
+#Step 01) pdf-file
 Have a .pdf-file locally on your drive of which you desire to use OCR on a certain area.
 ![imgExamplePdf](/tut/samplepdf_s.jpg)
 
-Step 02) undersand how coordinates in a pdf-file work.
+
+#Step 02) undersand how coordinates in a pdf-file work.
+As used by the iTextPdf-librarie:
 ![imgAnnotatedExamplePdf](/tut/samplepdf_annotation1_s.jpg)
 
-As used by the iTextPdf-librarie:
 - all values for coordinates are given in pt
 - origin of the coordinate system (0/0) ist the lower-left corner
-
 - an area which OCR should be used on ist defined by to points A and B
 - point A is the lower left corner of the rectangle, point B is the upper right corner of the rectangle
 - a point consists of a value (float) for the postion on the  X axis and one for the position on the Y axis e.g. A(x/y)
-- 
+
 
 Step 03) use the provided methods
 
