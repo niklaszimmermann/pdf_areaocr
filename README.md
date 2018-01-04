@@ -34,6 +34,7 @@ Step 01) pdf-file
 Have a .pdf-file locally on your drive of which you desire to use OCR on a certain area.
 
 ![test image size](/tut/samplepdf_s.jpg)
+<!-- .element style="border: 5;" -->
 
 
 Step 02) undersand how coordinates in a pdf-file work.
