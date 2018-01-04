@@ -31,15 +31,12 @@ For example I set up an event which uses PowerShell to:
 
 ## How-To
 #Step 01) pdf-file
-
 Have a .pdf-file locally on your drive of which you desire to use OCR on a certain area.
 ![imgExamplePdf](/tut/samplepdf_s.jpg)
 
 
 #Step 02) undersand how coordinates in a pdf-file work.
-
 As used by the iTextPdf-librarie:
-
 ![imgAnnotatedExamplePdf](/tut/samplepdf_annotation1_s.jpg)
 
 - all values for coordinates are given in pt
@@ -48,8 +45,7 @@ As used by the iTextPdf-librarie:
 - point A is the lower left corner of the rectangle, point B is the upper right corner of the rectangle
 - a point consists of a value (float) for the postion on the  X axis and one for the position on the Y axis e.g. A(x/y)
 
-
-Step 03) use the provided methods
+#Step 03) use the provided methods
 
 
 
