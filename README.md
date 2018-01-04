@@ -35,7 +35,7 @@ Have a .pdf-file locally on your drive of which you desire to use OCR on a certa
 ![imgExamplePdf](/tut/samplepdf_s.jpg)
 
 
-#Step 02) undersand how coordinates in a pdf-file work.
+#Step 02) undersand how coordinates in a pdf-file work
 As used by the iTextPdf-librarie:
 ![imgAnnotatedExamplePdf](/tut/samplepdf_annotation1_s.jpg)
 
@@ -58,12 +58,20 @@ In my example that results in PointA(118,1 / 265,1) and PointB(484,1 x 213,3).
 
 #Step 04) correct the values and convert them into the required format
 
-- sumatra uses the upper left corner as origin, hence we have to adjust our values for the use with the iTextPdf librarie
+- Sumatra uses the upper left corner as origin, hence we have to adjust our values for the use with the iTextPdf librarie
 - the value for the position onn the x-axis stays the same.
 
 In my example that means we know the following values for the adjustes Point: corPointA(118,1 / ?)
 
-- 
+- to correct the value for the position on the y-axis we need to know the overall height of the document
+- hover the lower boarder of the document in Sumatra and write down the y-value
+- subtract the y-value of PointA from the elaborated overall / max height
+
+In my example that means 841,8 (max. height) - 265,1 (y-value PointA) = 576,7 --> corPointA(118,1 / 576,7)
+Repeating the steps for PointB we end up with the following valid Points: corPointA(118,1 / 576,7); corPointB(484,1 / 628,5)
+Valid Data: 118.1f, 576.7f, 484.1f, 628.5f (float values C#)
+
+#Step 05) feed the data into the provided methods
 
 
 
@@ -71,7 +79,7 @@ In my example that means we know the following values for the adjustes Point: co
 
 
 
-#Step 04) use the provided methods
+
 
 
 
