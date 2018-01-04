@@ -45,7 +45,33 @@ As used by the iTextPdf-librarie:
 - point A is the lower left corner of the rectangle, point B is the upper right corner of the rectangle
 - a point consists of a value (float) for the postion on the  X axis and one for the position on the Y axis e.g. A(x/y)
 
-#Step 03) use the provided methods
+#Step 03) get the values
+For this step I use the software "Sumatra PDF Reader" which is available under the GPLv3 license
+![imgSumatra](/tut/sumatra_s.jpg)
+
+- pressing the hotkey "m" will open an area, which shows the coordinates of your current cursor position
+- pressing the hotkey "m" now allows to circle through the units - make sure the values shown in pt
+- hover the lower left corner of the desired area and note down the values PointA(x/y)
+- hover the upper right corner of the desired area and note down the values PointB(x/y)
+
+In my example that results in PointA(118,1 / 265,1) and PointB(484,1 x 213,3).
+
+#Step 04) correct the values and convert them into the required format
+
+- sumatra uses the upper left corner as origin, hence we have to adjust our values for the use with the iTextPdf librarie
+- the value for the position onn the x-axis stays the same.
+
+In my example that means we know the following values for the adjustes Point: corPointA(118,1 / ?)
+
+- 
+
+
+
+
+
+
+
+#Step 04) use the provided methods
 
 
 
