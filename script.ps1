@@ -1,11 +1,21 @@
-﻿using System;
+﻿#for the case that that access to the .dll is restricted
+#
+#Get-ExecutionPolicy
+#Unblock-File -Path $dlllocation
+
+
+#file paths
+$dlllocation = "$PSScriptRoot\itextsharp.dll"
+$inputfilelocation = "$PSScriptRoot\input.pdf" #our menu-of-the-day is located here.
+
+#sourcecode C#
+$source = @"
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using iTextSharp;
-
-//required for PowerShell to find the referenced assemblies
 using Rectangle = iTextSharp.text.Rectangle;
 using PdfReader = iTextSharp.text.pdf.PdfReader;
 using RegionTextRenderFilter = iTextSharp.text.pdf.parser.RegionTextRenderFilter;
@@ -75,4 +85,17 @@ namespace tutorial_namespace
         }
     }
 }
+"@
 
+#creates a type and instance of the iTextSharp-library / assemblie 
+Add-Type -Path $dlllocation
+
+#path to the referenced assemblies used in the C# code
+$refs = ($dlllocation) 
+
+#creates a type and instance of the C# code
+Add-Type -ReferencedAssemblies $refs -TypeDefinition $source -Language CSharp 
+
+#use of the C# code
+$content = [tutorial_namespace.tutorial_class]::GitTutorialConfig($inputfilelocation)
+$content
