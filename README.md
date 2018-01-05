@@ -11,7 +11,7 @@ it would help me out a lot and is highly appreciated.
 I strongly believe that the internet thrives of user participation,
 hence I'm hoping that somebody might find this useful / helpful. 
 
-## Disclaimer - not included but needed Software and Libraries.
+## Disclaimer - not included but needed software and libraries.
 iTextPdf:
 - the .dll has to be placed in the main directory (not included by me)
 - iTextPdf is licensed under AGPL
@@ -109,7 +109,7 @@ For our example (one area / rectangle) it could look like this:
 Used in PowerShell: 
 ![UsedInPowerShell](/tut/powershell.jpg)
 
-Now nothing stand of our way to use this for automationtasks for example sending
+Now nothing stands in our way of using this for automationtasks for example sending
 a notification mail on system startup.
 
 
