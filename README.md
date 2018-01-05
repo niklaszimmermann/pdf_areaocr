@@ -11,6 +11,18 @@ it would help me out a lot and is highly appreciated.
 I strongly believe that the internet thrives of user participation,
 hence I'm hoping that somebody might find this useful / helpful. 
 
+## Disclaimer - not included but needed Software and Libraries.
+iTextPdf:
+- the .dll has to be placed in the main directory (not included by me)
+- iTextPdf is licensed under AGPL
+- download available for example on sourceforge
+- for more information look at their website https://itextpdf.com/
+
+Sumatra PDF Reader:
+- used to manually elaborate the coordinates of areas in .pdf files (not included by me)
+- download available for example on sourceforge
+- for more information look at their website https://www.sumatrapdfreader.org/
+
 ## Introduction
 Reads a certain area of a .pdf file and returns the content as stringVariable.
 
@@ -67,26 +79,38 @@ In my example that means we know the following values for the adjustes Point: co
 - hover the lower boarder of the document in Sumatra and write down the y-value
 - subtract the y-value of PointA from the elaborated overall / max height
 
-In my example that means 841,8 (max. height) - 265,1 (y-value PointA) = 576,7 --> corPointA(118,1 / 576,7)
+In my example that means 841,8 (max. height) - 265,1 (y-value PointA) = 576,7
+--> corPointA(118,1 / 576,7)
+
 Repeating the steps for PointB we end up with the following valid Points: corPointA(118,1 / 576,7); corPointB(484,1 / 628,5)
+
 Valid Data: 118.1f, 576.7f, 484.1f, 628.5f (float values C#)
 
 #Step 05) feed the data into the provided methods
 
-simpelst way
+For our example (one area / rectangle) it could look like this:
 
-areaArray = new Rect[1] {createRect(118.1f, 576.7f, 484.1f, 628.5f)}
-Console.WriteLine(readRect(areaArray, @"C:\Users\[...]\menu-of-the-day.pdf"))
+        public static string GitTutorialConfig(string filepath)
+        {
+            //creation of the rectangle-object(area)
+            Rectangle tempRectangle = createRect(118.1f, 576.7f, 484.1f, 628.5f);
+
+            //creation of the rectangle-array, which the readRect-method receives
+            Rectangle[] tempRectArray = new Rectangle[1]; 
+            tempRectArray[0] = tempRectangle;             
+
+            //call of the readRect method
+            string[] catchOutput = readRect(tempRectArray, filepath);
+
+            //return of the content as string
+            return catchOutput[0];
+        }
+
+Used in PowerShell: 
+![UsedInPowerShell](/tut/powershell.jpg)
+
+Now nothing stand of our way to use this for automationtasks for example sending
+a notification mail on system startup.
 
 
 
-
-
-
-
-
-
-
-
-## License
-https://sourceforge.net/projects/itextsharp/
